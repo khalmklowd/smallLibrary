@@ -1,8 +1,7 @@
-const theHobbit =  new book("The Hobbit", "Tolkien", 295, 250, "Not finished.");
- 
-var myLibrary = [theHobbit];
 
-function book(title, author, pages, pagesRead, notes) {
+
+class book {
+    constructor(title, author, pages, pagesRead, notes){
     this.title = title;
     this.author = author;
     this.pages = pages;
@@ -10,6 +9,11 @@ function book(title, author, pages, pagesRead, notes) {
     this.notes = notes;
     this.info = `${title} by ${author}, has ${pages} pages and you have ${pages-pagesRead} pages left to read. ${notes}`;
   } 
+}
+
+const theHobbit =  new book("The Hobbit", "Tolkien", 295, 250, "Not finished.");
+ 
+var myLibrary = [theHobbit];
 
 function addBook() {
   tit = prompt("Title?");
@@ -39,3 +43,4 @@ function putToScreen(books) {
   }
 
 
+console.log(this.name);
